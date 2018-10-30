@@ -1,0 +1,9 @@
+<h1>All Entries</h1>
+
+<ul id="entries">
+  <% @entries.each do |entry| %>
+    <li>
+      <%= entry.title %>
+    </li>
+  <% end %>
+</ul>
