@@ -9,8 +9,9 @@ describe "user sees all entries" do
 
       visit '/entries'
 
-      expect(page).to have_content(entry_1.title)
-      expect(page).to have_content(entry_2.title)
+      expect(page).to have_link(entry_1.title)
+      expect(page).to have_link(entry_2.title)
+      expect(page).to have_link("Create a New Entry")
 
     end
   end

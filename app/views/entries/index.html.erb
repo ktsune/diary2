@@ -3,7 +3,10 @@
 <ul id="entries">
   <% @entries.each do |entry| %>
     <li>
-      <%= entry.title %>
+      <%= link_to entry.title, entry_path(entry) %>
+       <!-- # class: 'entry-title', id: "entry-#{entry.id}" %> -->
     </li>
   <% end %>
 </ul>
+
+<%= link_to "Create a New Entry", new_entry_path, class: "new-entry" %>
